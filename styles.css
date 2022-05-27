@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.7rem;
+  color: #a3a5ae;
+  font-weight: 200;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "containL containM containR";
+  grid-template-columns: 1fr 1fr 1fr;
+  min-width: 90rem;
+  width: 75%;
+  height: 58rem;
+  margin: 2rem auto;
+}
+main .card-style {
+  height: 27rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  width: 90%;
+  background-color: #fafafa;
+  box-shadow: 0.3px 0.3px 15px #a9a9aa, -0.3px -0.3px 15px #dad7d7;
+  position: relative;
+}
+main .card-style h3 {
+  position: relative;
+  margin: 2.7rem 0 0 3rem;
+  font-size: 2rem;
+}
+main .card-style p {
+  position: relative;
+  text-align: start;
+  margin: 1rem 0 0 3rem;
+  font-size: 1.5rem;
+  width: 70%;
+}
+main .card-style .contain-img {
+  position: absolute;
+  bottom: 4vh;
+  right: 4vh;
+  display: flex;
+  justify-content: end;
+}
+main .card-style .contain-img img {
+  width: 6.5rem;
+}
+main .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container-left {
+  grid-area: containL;
+}
+main .container-left .card1 {
+  border-top: 0.4rem solid #45d3d3;
+}
+main .container-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: containM;
+}
+main .container-mid .card2 {
+  border-top: 0.4rem solid #ea5353;
+}
+main .container-mid .card3 {
+  border-top: 0.4rem solid #fcaf4a;
+}
+main .container-right {
+  grid-area: containR;
+}
+main .container-right .card4 {
+  border-top: 0.4rem solid #549ef2;
+}
+
+@media screen and (max-width: 57rem) {
+  h1 {
+    margin-top: 7rem;
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .contain-text-p {
+    margin: 2rem auto;
+    width: 90%;
+  }
+  .contain-text-p p {
+    font-size: 1.8rem;
+  }
+
+  main {
+    grid-template-areas: "containL" "containM" "containR";
+    grid-template-columns: 1fr;
+    min-width: 20rem;
+    width: 90%;
+    height: auto;
+    margin: 5rem auto;
+  }
+  main .card-style {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  main .card-style h3 {
+    font-size: 2.5rem;
+  }
+  main .card-style p {
+    font-size: 1.7rem;
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

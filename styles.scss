@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+$font-family: 'Poppins',sans-serif;
+//Weights: 200 , 400 , 600
+$color-red: hsl(0, 78%, 62%);
+$color-cyan: hsl(180, 62%, 55%);
+$color-orange: hsl(34, 97%, 64%);
+$color-blue: hsl(212, 86%, 64%);
+$color-very-dark-blue: hsl(234, 12%, 34%);
+$color-grayish-blue: hsl(229, 6%, 66%);
+$color-very-light-gray: hsl(0, 0%, 98%);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    background-color: $color-very-light-gray;
+    font-family: $font-family;
+}
+h1,h2,p{
+    text-align: center;
+}
+h1{
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-weight: 200;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+font-size: 1.7rem;
+color: $color-grayish-blue;
+font-weight: 200;
+}
+main{
+    display: grid;
+    grid-template-areas:
+    "containL containM containR"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-width:90rem;
+    width: 75%;
+    height: 58rem;
+    margin: 2rem auto;
+
+
+    .card-style{
+        height: 27rem;
+        width: 100%;
+        border-radius: .7rem;
+        width: 90%;
+       background-color: $color-very-light-gray; 
+       box-shadow: 0.3px 0.3px 15px #a9a9aa, -0.3px -0.3px 15px #dad7d7;
+            position: relative;
+        h3{
+            position: relative;
+            margin: 2.7rem 0 0 3rem ;
+            font-size: 2rem;
+        }
+        p{
+            position: relative;
+            text-align: start;
+            margin: 1rem 0 0 3rem;
+            font-size: 1.5rem;
+            width: 70%;
+        }
+        .contain-img{
+            position: absolute;
+            bottom: 4vh;
+            right: 4vh;
+            display: flex;
+            justify-content: end;
+            img{
+                width: 6.5rem;
+            }
+        }
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-left{
+        grid-area: containL;
+        .card1{
+            border-top: .4rem solid $color-cyan;
+        }
+    }
+    .container-mid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        grid-area:containM ;
+        .card2{
+            border-top: .4rem solid $color-red;
+        }
+        .card3{
+            border-top: .4rem solid $color-orange;
+        }
+    
+    }
+    .container-right{
+        grid-area:containR ;
+    .card4{
+        border-top: .4rem solid $color-blue;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 57rem) {
+   
+    h1 {
+            margin-top: 7rem; 
+            font-size: 3.5rem; 
+        }
+    h2{
+            font-size: 3.5rem; 
+    }
+    
+        .contain-text-p{
+            margin: 2rem auto; 
+            width: 90%;             
+            p {
+                font-size: 1.8rem; 
+                 
+        }
+        }
+    main { 
+            grid-template-areas:
+                "containL"
+                "containM"
+                "containR"
+            ; 
+            grid-template-columns: 1fr; 
+            min-width: 20rem; 
+            width: 90%; 
+            height: auto; 
+            margin: 5rem auto; 
+    
+    
+            .card-style {
+                width: 100%; 
+                margin-top: 3rem; 
+    
+                h3 {
+                    font-size: 2.5rem; 
+                }
+    
+                p {
+                    font-size: 1.7rem; 
+                    width: 80%; 
+                }
+
+            }
+        }
+}
